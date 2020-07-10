@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="solid flex-container">
+      <div class="solid" style="width: 200px; height: 200px;"></div>
+    </div>
+
+    <div class="solid flex-container" id="clan"></div>
+
+    <div class="solid flex-container">
+      <div class="solid" style="width: 200px; height: 200px;"></div>
+    </div>
+
+    <script src="./clans.js"></script>
+    <script>
+      Object.keys(clans).map((clan) =>
+        $("#clan").append(
+          `<a class="clan-card" href="./clan.html?clan=${clan}"><img src="http://i.stack.imgur.com/2OrtT.jpg" width="100%" /></a>`
+        )
+      );
+    </script>
+  </body>
+</html>

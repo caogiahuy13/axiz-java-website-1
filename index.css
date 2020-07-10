@@ -1,0 +1,19 @@
+.solid {
+  border-style: solid;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.clan-card {
+  margin: 20px;
+}
+.officer-card {
+  margin: 20px;
+}
+.country-card {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+}
