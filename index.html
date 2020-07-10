@@ -13,22 +13,19 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body>
-    <div class="solid flex-container">
-      <div class="solid" style="width: 200px; height: 200px;"></div>
+  <body class="index-background">
+    <div class="flex-container">
+      <img class="logo" src="./img/logo.png" />
     </div>
+    <div class="flex-container" id="clan"></div>
 
-    <div class="solid flex-container" id="clan"></div>
-
-    <div class="solid flex-container">
-      <div class="solid" style="width: 200px; height: 200px;"></div>
-    </div>
-
-    <script src="./clans.js"></script>
+    <script src="./countries.js"></script>
     <script>
-      Object.keys(clans).map((clan) =>
+      Object.keys(countries).map((country) =>
         $("#clan").append(
-          `<a class="clan-card" href="./clan.html?clan=${clan}"><img src="http://i.stack.imgur.com/2OrtT.jpg" width="100%" /></a>`
+          `<a href="./country.html?country=${country}">
+            <img class="clan-card" src="${countries[country].logo}"/>
+          </a>`
         )
       );
     </script>

@@ -1,6 +1,6 @@
-const clans = {
+const countries = {
   shu: {
-    logo: "logo_shu",
+    logo: "./img/shu.jpg",
     officers: [
       "zhaoyun",
       "zhangfei",
@@ -12,21 +12,18 @@ const clans = {
     ],
   },
   wei: {
-    logo: "logo_wei",
+    logo: "./img/wei.jpg",
   },
   wu: {
-    logo: "logo_wu",
-  },
-  jin: {
-    logo: "logo_jin",
+    logo: "./img/wu.jpg",
   },
 };
 
-const officer = {
+const officers = {
   zhaoyun: {
     clan: "shu",
     image: "",
-    quote: "",
-    trailer: "",
+    trailer: "trailer",
+    introduce: "introduce",
   },
 };

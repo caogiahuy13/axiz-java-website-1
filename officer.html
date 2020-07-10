@@ -12,34 +12,37 @@
         background-size: cover;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body class="bg">
     <div class="solid" style="display: flex; flex-direction: column;">
       <div
+        id="name"
         class="solid"
         style="width: 200px; height: 200px; margin: 100px;"
       ></div>
       <div
+        id="introduce"
         class="solid"
         style="width: 200px; height: 200px; margin: 100px;"
       ></div>
       <div
+        id="trailer"
         class="solid"
         style="width: 200px; height: 200px; margin: 100px;"
       ></div>
     </div>
+
+    <script src="./countries.js"></script>
+    <script src="./util.js"></script>
+    <script>
+      let name = getUrlParams()["name"];
+      $("#name").append(name);
+      console.log(name);
+
+      $("#introduce").append(officers[name].introduce);
+
+      $("#trailer").append(officers[name].trailer);
+    </script>
   </body>
-
-  <script src="./clans.js"></script>
-  <script src="./util.js"></script>
-  <script>
-    let clanName = getUrlParams()["clan"];
-    $("#logo").append(clans[clanName].logo);
-
-    clans[clanName].officers.map((officer) =>
-      $("#officers").append(
-        `<a class="officer-card" href="./officer.html?name=${officer}"><img src="http://i.stack.imgur.com/2OrtT.jpg" width="100%" /></a>`
-      )
-    );
-  </script>
 </html>
