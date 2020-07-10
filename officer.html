@@ -1,48 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Officer</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <style>
-      .bg {
-        background-image: url("./img/background.jpg");
-        background-color: #cccccc;
-        background-size: cover;
-      }
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body class="bg">
-    <div class="solid" style="display: flex; flex-direction: column;">
-      <div
-        id="name"
-        class="solid"
-        style="width: 200px; height: 200px; margin: 100px;"
-      ></div>
-      <div
-        id="introduce"
-        class="solid"
-        style="width: 200px; height: 200px; margin: 100px;"
-      ></div>
-      <div
-        id="trailer"
-        class="solid"
-        style="width: 200px; height: 200px; margin: 100px;"
-      ></div>
+  <body class="character-bg">
+    <div style="display: flex;">
+      <div style="display: flex; flex-direction: column;">
+        <div
+          style="
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            margin: 40px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+          "
+        >
+          <div id="name" class="character-name"></div>
+          <hr style="width: 50%;" />
+          <div id="introduce" class="character-introduce"></div>
+        </div>
+      </div>
+
+      <img id="image" style="width: 70%;" src="" />
     </div>
 
     <script src="./countries.js"></script>
+    <script src="./officers.js"></script>
     <script src="./util.js"></script>
     <script>
       let name = getUrlParams()["name"];
-      $("#name").append(name);
-      console.log(name);
+      $("#name").append(officers[name].name);
 
-      $("#introduce").append(officers[name].introduce);
+      $("#introduce").append(officers[name].quote);
 
       $("#trailer").append(officers[name].trailer);
+
+      $("#image").attr("src", officers[name].bgImage);
     </script>
   </body>
 </html>

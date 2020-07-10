@@ -7,31 +7,27 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body>
-    <div class="solid flex-container" id="logo">
-      <div class="solid" style="width: 200px; height: 200px;"></div>
-    </div>
-    <div class="solid flex-container" id="officers"></div>
-    <div class="solid flex-container">
-      <div class="solid country-card"></div>
-      <div class="solid country-card"></div>
-      <div class="solid country-card"></div>
-      <div class="solid country-card"></div>
-    </div>
+  <body class="index-background">
+    <div class="flex-container" id="logo"></div>
+    <div class="flex-container" id="officers"></div>
 
     <script src="./countries.js"></script>
+    <script src="./officers.js"></script>
     <script src="./util.js"></script>
     <script>
       let countryName = getUrlParams()["country"];
-      $("#logo").append(countries[countryName].logo);
+      // $("#logo").append(
+      //   `<img class="clan-card" src="${countries[countryName].logo}"/>`
+      // );
 
-      countries[countryName].officers.forEach((officer) =>
+      countries[countryName].officers.forEach((officer) => {
+        console.log(officer);
         $("#officers").append(
           `<a class="officer-card" href="./officer.html?name=${officer}">
-            <img src="http://i.stack.imgur.com/2OrtT.jpg" width="100%" />
+            <img class="officer-card-img" src="${officers[officer].image}"/>
           </a>`
-        )
-      );
+        );
+      });
     </script>
   </body>
 </html>

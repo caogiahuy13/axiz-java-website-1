@@ -2,13 +2,29 @@ const countries = {
   shu: {
     logo: "./img/shu.jpg",
     officers: [
-      "zhaoyun",
-      "zhangfei",
+      "baosanniang",
+      "fazheng",
+      "guanping",
+      "guansuo",
+      "guanxing",
+      "guanyinping",
       "guanyu",
-      "liubei",
       "huangzhong",
+      "jiangwei",
+      "liubei",
+      "liushan",
       "machao",
+      "madai",
       "pangtong",
+      "weiyan",
+      "xingcai",
+      "xushu",
+      "yueying",
+      "zhangbao",
+      "zhangfei",
+      "zhaoyun",
+      "zhoucang",
+      "zhugeliang",
     ],
   },
   wei: {
@@ -16,14 +32,5 @@ const countries = {
   },
   wu: {
     logo: "./img/wu.jpg",
-  },
-};
-
-const officers = {
-  zhaoyun: {
-    clan: "shu",
-    image: "",
-    trailer: "trailer",
-    introduce: "introduce",
   },
 };
