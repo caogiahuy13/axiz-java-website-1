@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Officer</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body class="character-bg">
@@ -27,9 +27,9 @@
       <img id="image" style="width: 70%;" src="" />
     </div>
 
-    <script src="./countries.js"></script>
-    <script src="./officers.js"></script>
-    <script src="./util.js"></script>
+    <script src="./js/countries.js"></script>
+    <script src="./js/officers.js"></script>
+    <script src="./js/util.js"></script>
     <script>
       let name = getUrlParams()["name"];
       $("#name").append(officers[name].name);
