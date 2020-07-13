@@ -1,0 +1,31 @@
+.character-bg {
+  background: url("../img/character-bg.jpg") no-repeat center center fixed;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  background-blend-mode: overlay;
+}
+.character-img {
+  width: 60%;
+  object-fit: cover;
+}
+.character-name {
+  font-size: 200%;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px black;
+  text-align: center;
+}
+.character-introduce {
+  font-size: 120%;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px black;
+  margin-top: 30px;
+}
+.character-info-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  margin: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}

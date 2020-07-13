@@ -1,0 +1,12 @@
+.officer-card {
+  margin: 20px;
+}
+.officer-card-img {
+  width: 200px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+.country-background {
+  background: url("../img/back.jpg") no-repeat center center fixed;
+  background-color: rgba(0%, 0%, 0%, 0.4);
+  background-blend-mode: overlay;
+}

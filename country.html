@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>キャラクター</title>
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/country.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body class="index-background">
+  <body class="country-background">
     <div class="flex-container" id="logo"></div>
     <div class="flex-container" id="officers"></div>
 
@@ -16,11 +17,6 @@
     <script src="./js/util.js"></script>
     <script>
       let countryName = getUrlParams()["country"];
-      console.log(countryName);
-      // $("#logo").append(
-      //   `<img class="clan-card" src="${countries[countryName].logo}"/>`
-      // );
-
       countries[countryName].officers.forEach((officer) => {
         $("#officers").append(
           `<a class="officer-card" href="./officer.html?name=${officer}">
