@@ -32,14 +32,18 @@
   margin: 2rem;
 }
 .index-background {
-  background-image: url("./img/back.jpg");
+  background-image: url("../img/back.jpg");
   background-color: #cccccc;
   background-size: cover;
 }
 .character-bg {
-  background-image: url("./img/character-bg.jpg");
+  background-image: url("../img/character-bg.jpg");
   background-color: #cccccc;
   background-size: cover;
+}
+.character-img {
+  width: 60%;
+  object-fit: cover;
 }
 .character-name {
   font-size: 200%;
